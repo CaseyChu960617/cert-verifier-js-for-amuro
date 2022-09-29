@@ -14,6 +14,9 @@ function getMerkleRoot2019Chain (anchor): IBlockchainObject {
     },
     eth: {
       chainName: BLOCKCHAINS.ethmain.name
+    },
+    mat: {
+      chainName: BLOCKCHAINS.matmain.name
     }
   };
   const dataArray = anchor.split(':');

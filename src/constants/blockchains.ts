@@ -7,6 +7,8 @@ export enum SupportedChains {
   Ethrinkeby = 'ethrinkeby',
   Ethgoerli = 'ethgoerli',
   Ethsepolia = 'ethsepolia',
+  Matmain = 'matmain',
+  Matmumbai = 'matmumbai',
   Mocknet = 'mocknet',
   Regtest = 'regtest',
   Testnet = 'testnet'
@@ -24,7 +26,7 @@ export interface IBlockchainObject {
   };
 }
 
-const BLOCKCHAINS: {[chain in SupportedChains]: IBlockchainObject} = {
+const BLOCKCHAINS: { [chain in SupportedChains]: IBlockchainObject } = {
   [SupportedChains.Bitcoin]: {
     code: SupportedChains.Bitcoin,
     name: 'Bitcoin',
@@ -81,6 +83,24 @@ const BLOCKCHAINS: {[chain in SupportedChains]: IBlockchainObject} = {
       raw: `https://sepolia.etherscan.io/getRawTx?tx=${TRANSACTION_ID_PLACEHOLDER}`
     }
   },
+  [SupportedChains.Matmain]: {
+    code: SupportedChains.Matmain,
+    name: 'Polygon',
+    signatureValue: 'polygonMainnet',
+    transactionTemplates: {
+      full: `https://polygonscan.io/tx/${TRANSACTION_ID_PLACEHOLDER}`,
+      raw: `https://polygonscan.io/getRawTx?tx=${TRANSACTION_ID_PLACEHOLDER}`
+    }
+  },
+  [SupportedChains.Matmumbai]: {
+    code: SupportedChains.Matmumbai,
+    name: 'Polygon Testnet',
+    signatureValue: 'polygonMumbai',
+    transactionTemplates: {
+      full: `https://mumbai.polygonscan.io/tx/${TRANSACTION_ID_PLACEHOLDER}`,
+      raw: `https://mumbai.polygonscan.io/getRawTx?tx=${TRANSACTION_ID_PLACEHOLDER}`
+    }
+  },
   [SupportedChains.Mocknet]: {
     code: SupportedChains.Mocknet,
     name: 'Mocknet',
@@ -117,7 +137,4 @@ function isTestChain (chain: SupportedChains): boolean {
   return chain !== BLOCKCHAINS.bitcoin.code && chain !== BLOCKCHAINS.ethmain.code;
 }
 
-export {
-  BLOCKCHAINS,
-  isTestChain
-};
+export { BLOCKCHAINS, isTestChain };
