@@ -143,6 +143,32 @@ describe('domain certificates get chain use case test suite', function () {
           expect(result).toEqual(chainAssertion);
         });
       });
+
+      describe('and the network is polygon mainnet', function () {
+        it('should return polygon mainnet value', function () {
+          const fixtureSignature = {
+            anchors: [
+              'blink:mtc:mainnet:0xfaea9061b06ff532d96ad91bab89fdfab900ae7d4524161431dc88318216435a'
+            ]
+          };
+          const result = domain.certificates.getChain(fixtureAddress, fixtureSignature);
+          const chainAssertion = BLOCKCHAINS.matmain;
+          expect(result).toEqual(chainAssertion);
+        });
+      });
+
+      describe('and the network is polygon mumbai', function () {
+        it('should return polygon mumbai value', function () {
+          const fixtureSignature = {
+            anchors: [
+              'blink:mtc:mumbai:0xfaea9061b06ff532d96ad91bab89fdfab900ae7d4524161431dc88318216435a'
+            ]
+          };
+          const result = domain.certificates.getChain(fixtureAddress, fixtureSignature);
+          const chainAssertion = BLOCKCHAINS.matmumbai;
+          expect(result).toEqual(chainAssertion);
+        });
+      });
     });
   });
 
