@@ -250,12 +250,14 @@ export default class Verifier {
       const res: any = await action();
       if (step) {
         this._updateStatusCallback(step, VERIFICATION_STATUSES.SUCCESS, verificationSuite);
+        console.log(`${step} success`);
         this._stepsStatuses.push({ code: step, status: VERIFICATION_STATUSES.SUCCESS });
       }
       return res;
     } catch (err) {
       if (step) {
         this._updateStatusCallback(step, VERIFICATION_STATUSES.FAILURE, verificationSuite, err.message);
+        console.log(`${step} failed`);
         this._stepsStatuses.push({
           code: step,
           message: err.message,

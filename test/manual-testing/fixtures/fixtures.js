@@ -153,9 +153,9 @@ const fixtureV3 = {
     credentialSubject: { id: "did:example:ebfeb1f712ebc6f1c276e12ec21" },
     proof: {
         type: "MerkleProof2019",
-        created: "2022-09-29T17:16:32.141899",
+        created: "2022-09-30T15:03:51.153725",
         proofValue:
-            "znKD4YGVqA8texttaoJhEHPqsTM7JxpnfZtTrs9dz8tH1XxxJyb9ym2smSV5Pz6oTT3Jx1z3JhyTNaAvFwoC5bALpNeiGNehJMxh4Ut7noJnbnzdN9FyZ18NELhZ3RdgkeLQMxUy1YugayctcYSR1uiRBrzyQ9VJwwEWuR1ByKKxkZ1Hg73GFRYn3KFgGbypTargxk2hwEoxwKtpYL4KL1cU3P7GLzTypGpuA8VAoPsykxqWXPkPjugHxvhDRxNew14YZrvFckqTx7PKiZ1SGsvydGG5ebwvNnqomyvHMDPvCrhjiVbY9mQVVtQ",
+            "znKD4YGVqA8texttaoJhEHPqsTM7JxpnfZtTrs9dz8tH1XxxJyb9ym2smSV5Pz6oTT3Jx1z3JhyTNaAvFwoC5bALpNeiGNehJMxh4Ut7noJnbnzdN9FyZ18NELhZ3RdgkeLQMxUy1YugayctcYSR1uiRBrzyQ9VJwwEWuR1ByKKxkZ1Hg73GFRYn3KFgGbypTargxk2hwEoxwKtpYL4KL1cU3P7GLzTypGpt8xE6vM5kCjK1Zuyp8tFFkzq1Y2v7yu7fTfmCmBokNt26ApDDTzu7ziiJ7L3py3RJspkMz24E6AWjfSVYm69K7MN",
         proofPurpose: "assertionMethod",
         verificationMethod: "https://storage.googleapis.com/amruo-cert-test/issuerProfile.json",
     },

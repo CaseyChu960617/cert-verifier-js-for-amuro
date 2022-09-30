@@ -15,7 +15,7 @@ function getMerkleRoot2019Chain (anchor): IBlockchainObject {
     eth: {
       chainName: BLOCKCHAINS.ethmain.name
     },
-    mat: {
+    mtc: {
       chainName: BLOCKCHAINS.matmain.name
     }
   };
@@ -25,6 +25,7 @@ function getMerkleRoot2019Chain (anchor): IBlockchainObject {
     const chainCode = dataArray[chainIndex];
     const network = dataArray[chainIndex + 1];
     const chainCodeSignatureValue = supportedChainsMap[chainCode].chainName.toLowerCase() + capitalize(network);
+    console.log(chainCodeSignatureValue);
     return getChainObject(chainCodeSignatureValue);
   } else {
     return defaultChainAssumption();
@@ -56,6 +57,8 @@ function getChainObject (chainCodeSignatureValue): IBlockchainObject {
  */
 export default function getChain (address: string, proof: Receipt): IBlockchainObject {
   const cleanedSignature = proof || null;
+  console.log('receipt');
+  console.log(proof);
   if (cleanedSignature?.anchors) {
     const anchors = cleanedSignature.anchors;
     const anchor = anchors[0];
