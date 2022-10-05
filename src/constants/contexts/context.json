@@ -1,0 +1,9 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "schema": "https://schema.org/",
+        "subject": "schema:subject",
+        "degreeType": "schema:degreeType"
+    }
+}

@@ -90,6 +90,7 @@ export default class Certificate {
 
   async init (): Promise<void> {
     // Parse certificate
+    console.log(this.certificateJson);
     await this.parseJson(this.certificateJson);
     this.verifier = new Verifier({
       certificateJson: this.certificateJson,

@@ -38,6 +38,8 @@ export default async function computeLocalHash (document: Blockcerts): Promise<s
         documentUrl: url
       };
     }
+
+    // console.log(url);
     return jsonld.documentLoader(url);
   };
 

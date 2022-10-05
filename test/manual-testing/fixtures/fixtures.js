@@ -145,17 +145,26 @@ const fixtureV2 = {
 };
 
 const fixtureV3 = {
-    "@context": ["https://www.w3.org/2018/credentials/v1", "https://w3id.org/blockcerts/v3"],
-    id: "urn:uuid:bbba8553-8ec1-445f-82c9-a57251dd731c",
+    "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/blockcerts/v3",
+        "https://storage.googleapis.com/amruo-cert-test/context2.jsonld",
+    ],
+    id: "urn:uuid:1",
     type: ["VerifiableCredential", "BlockcertsCredential"],
     issuer: "https://storage.googleapis.com/amruo-cert-test/issuerProfile.json",
     issuanceDate: "2022-01-01T19:33:24Z",
+    metadata: '{"degreeType":"Bachelor Degree", "subject":"Arts"}',
     credentialSubject: { id: "did:example:ebfeb1f712ebc6f1c276e12ec21" },
+    name: "Max",
+    email: "max@gmail.com",
+    degreeType: "Bachelor Degree",
+    subject: "Computer Science",
     proof: {
         type: "MerkleProof2019",
-        created: "2022-09-30T15:03:51.153725",
+        created: "2022-10-05T13:34:23.934608",
         proofValue:
-            "znKD4YGVqA8texttaoJhEHPqsTM7JxpnfZtTrs9dz8tH1XxxJyb9ym2smSV5Pz6oTT3Jx1z3JhyTNaAvFwoC5bALpNeiGNehJMxh4Ut7noJnbnzdN9FyZ18NELhZ3RdgkeLQMxUy1YugayctcYSR1uiRBrzyQ9VJwwEWuR1ByKKxkZ1Hg73GFRYn3KFgGbypTargxk2hwEoxwKtpYL4KL1cU3P7GLzTypGpt8xE6vM5kCjK1Zuyp8tFFkzq1Y2v7yu7fTfmCmBokNt26ApDDTzu7ziiJ7L3py3RJspkMz24E6AWjfSVYm69K7MN",
+            "znKD4YGVqA8texv5ogkfRKzdkVL9FDMVEpbhpzFEMrwa7PaGB9Ps1mFYijeZko1GJ3JtUHhzNqYHdp39DAvz5Th12T61CjecxpP4bkG7yAXBc5xBoAJBnFedyUqedEm7QfjCpwcVtfzUDdgamtfXTbc2Be2NNVQWc4UswS8Yp6Tsf8JK5hJ9kG4oqHmZe1EsVTwJTcKcsXVtH4LWfcpFkDy43fY4imgETL3hpGHn6UXxvkur2U4DcDka7JSHyNWHnWmSfgEqf3aBkTwtkGkQr6kYKM1ijRBvA8iMGmu9ooCiC5XMUzJihj73kT5",
         proofPurpose: "assertionMethod",
         verificationMethod: "https://storage.googleapis.com/amruo-cert-test/issuerProfile.json",
     },

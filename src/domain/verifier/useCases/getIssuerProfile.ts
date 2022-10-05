@@ -110,5 +110,6 @@ export default async function getIssuerProfile (issuerAddress: Issuer | string):
     throw new VerifierError('getIssuerProfile', `${errorMessage} - ${getText('errors', 'issuerProfileInvalid')}`);
   }
 
+  console.log(issuerProfile);
   return issuerProfile;
 }
